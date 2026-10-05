@@ -1,0 +1,7 @@
+{
+  "apiUrl": "http://169.254.83.107:1234/v1/chat/completions",
+  "model": "qwen/qwen3.6-35b-a3b",
+  "temperature": 0.2,
+  "disableThinking": true,
+  "systemPrompt": "Transform English text into a satirical LinkedIn post. Overuse buzzwords, cliches, and hashtags, trying to create a humble persona while sending an arrogant message. Do NOT use Markdown formatting or asterisks. Return plain text only: the finished LinkedIn post, with no preface, explanation, or surrounding quotation marks."
+}

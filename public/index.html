@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Turn English notes into LinkedIn posts.">
+    <title>LinkedIn Slop</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="app-header">
+        <div>
+          <p class="eyebrow">ENGLISH → LINKEDIN</p>
+          <h1>Make it sound official.</h1>
+          <p class="subtitle">Turn a plain English note into a polished LinkedIn post.</p>
+        </div>
+        <span class="status-pill"><span aria-hidden="true"></span> Ready</span>
+      </header>
+
+      <form id="translate-form" class="translator">
+        <section class="panel" aria-labelledby="source-heading">
+          <div class="panel-header">
+            <div>
+              <p class="panel-label">ENGLISH INPUT</p>
+              <h2 id="source-heading">Your text</h2>
+            </div>
+          </div>
+          <textarea id="source-text" name="text" maxlength="100000" placeholder="Paste a plain English thought, update, or story…" required autofocus></textarea>
+          <div class="panel-footer">
+            <span id="character-count">0 characters</span>
+            <button id="clear-button" class="text-button" type="button">Clear</button>
+          </div>
+        </section>
+
+        <section class="panel" aria-labelledby="target-heading">
+          <div class="panel-header">
+            <div>
+              <p class="panel-label">LINKEDIN POST</p>
+              <h2 id="target-heading">Generated post</h2>
+            </div>
+          </div>
+          <div id="translation-output" class="output-preview" data-placeholder="Your LinkedIn post will appear here…" role="region" aria-live="polite" tabindex="0"></div>
+          <div class="panel-footer">
+            <span id="output-count">0 characters</span>
+            <button id="copy-button" class="text-button" type="button" disabled>Copy</button>
+          </div>
+        </section>
+
+        <div class="action-bar">
+          <p id="message" class="message" role="status" aria-live="polite">Paste an English thought to get started.</p>
+          <button id="translate-button" class="primary-button" type="submit">
+            <span id="button-label">Generate post</span>
+            <span id="button-spinner" class="spinner" aria-hidden="true"></span>
+          </button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
